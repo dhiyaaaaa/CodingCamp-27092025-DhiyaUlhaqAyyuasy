@@ -7,69 +7,137 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="img/logo.png">
+            </div>
+
+            <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="profile.html">Our Profile</a></li>
+                <li><a href="#profile">Our Profile</a></li>
+                <li><a href="#">Portofolio</a></li>
                 <li><a href="#">Message Us</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
-        <section class="welcome-section">
+    <!-- Welcome Section -->
+    <section id="welcome" class="welcome">
+        <div class="welcome-overlay"></div>
+        <div class="welcome-content">
             <h1 id="welcomeMessage">Hi, Welcome To Website</h1>
             <p>We provide the best solution patterns.</p>
-        </section>
+        </div>
+    </section>
 
-        <section class="headquarter-section">
-            <h2>Our Headquarter</h2>
-            <div class="headquarter-list">
-                <div class="headquarter-item">
-                    <div class="circle"></div>
-                    <p>Jakarta</p>
+    <!-- Headquarter Section -->
+    <section class="headquarter-section">
+        <h2>Our Headquarter</h2>
+        <div class="headquarter-list">
+            <div class="headquarter-item">
+                <div class="circle jakarta"></div>
+                <p>Jakarta</p>
+            </div>
+            <div class="headquarter-item">
+                <div class="circle bandung"></div>
+                <p>Bandung</p>
+            </div>
+            <div class="headquarter-item">
+                <div class="circle surabaya"></div>
+                <p>Surabaya</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Profile -->
+    <section id="profile" class="profile-section">
+    <div class="container">
+        <h2>Our Profile</h2>
+        <div class="profile-wrapper">
+        
+        <!-- Left: Company Info -->
+        <div class="profile-about">
+            <p>
+            We are a digital solutions company dedicated to delivering innovative 
+            and sustainable technology for businesses. Our team consists of 
+            passionate professionals who believe in creating value through 
+            creativity, strategy, and innovation.
+            </p>
+            <p>
+            Since 2015, we have worked with clients from various industries, 
+            helping them accelerate growth and adapt to the digital era.
+            </p>
+        </div>
+
+        <!-- Right: Contact Info -->
+        <div class="profile-contact">
+            <h3>Contact Information</h3>
+            <ul>
+            <li><strong>Head Office:</strong> Jl. Karyani No. 123, Tegal, Indonesia</li>
+            <li><strong>Phone:</strong> +62 281 123 456</li>
+            <li><strong>Email:</strong> dhiya.ayyuasy@gmail.com</li>
+            <li><strong>Working Hours:</strong> Mon – Fri, 08:00 – 17:00</li>
+            </ul>
+
+            <h3>Follow Us</h3>
+            <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- Form Message -->
+    <section id="message" class="message">
+    <h2>Message Us</h2>
+    <div class="container">
+        <div class="message-content">
+        
+        <!-- Kolom kiri: Form -->
+        <div class="message-form">
+            <form id="messageForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="birthdate">Birth Date:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+
+            <p>Gender:</p>
+            <div class="gender-group">
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+                <label class="form-check-label" for="male">Male</label>
                 </div>
-                <div class="headquarter-item">
-                    <div class="circle"></div>
-                    <p>Bandung</p>
-                </div>
-                <div class="headquarter-item">
-                    <div class="circle"></div>
-                    <p>Surabaya</p>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                <label class="form-check-label" for="female">Female</label>
                 </div>
             </div>
-        </section>
 
-        <section class="message-section">
-            <h2>Message Us</h2>
-            <form id="messageForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
 
-                <label for="birthdate">Birth Date:</label>
-                <input type="date" id="birthdate" name="birthdate" required>
-
-                <p>Gender:</p>
-                <div class="gender-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gender" id="male" value="Laki-laki" required>
-                        <label class="form-check-label" for="male">Laki-laki</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gender" id="female" value="Perempuan">
-                        <label class="form-check-label" for="female">Perempuan</label>
-                    </div>
-                </div>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Submit</button>
+            <button type="submit">Submit</button>
             </form>
-            <div id="formDataDisplay"></div>
-        </section>
-    </main>
+        </div>
+
+        <!-- Kolom kanan: Hasil Data -->
+        <div id="formDataDisplay" class="form-result">
+            <h3>Form Data:</h3>
+            <p>Data will appear here after submitting.</p>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
 
     <footer>
         <p>Created By: Dhiya</p>
