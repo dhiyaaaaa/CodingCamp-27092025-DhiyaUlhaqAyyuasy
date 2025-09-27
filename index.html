@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi, Welcome</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Our Profile</a></li>
+                <li><a href="#">Message Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <h1 id="welcomeMessage">Hi, Welcome To Website</h1>
+            <p>We provide the best solution patterns.</p>
+        </section>
+
+        <section class="headquarter-section">
+            <h2>Our Headquarter</h2>
+            <div class="headquarter-list">
+                <div class="headquarter-item">
+                    <div class="circle"></div>
+                    <p>Jakarta</p>
+                </div>
+                <div class="headquarter-item">
+                    <div class="circle"></div>
+                    <p>Bandung</p>
+                </div>
+                <div class="headquarter-item">
+                    <div class="circle"></div>
+                    <p>Surabaya</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="message-section">
+            <h2>Message Us</h2>
+            <form id="messageForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="birthdate">Birth Date:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+
+                <p>Gender:</p>
+                <div class="gender-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="Laki-laki" required>
+                        <label class="form-check-label" for="male">Laki-laki</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="Perempuan">
+                        <label class="form-check-label" for="female">Perempuan</label>
+                    </div>
+                </div>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div id="formDataDisplay"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created By: Dhiya</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
